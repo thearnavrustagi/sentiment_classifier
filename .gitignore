@@ -1,0 +1,3 @@
+__pycache__/
+model/sentiment_model.dat
+dataset/dataset.csv

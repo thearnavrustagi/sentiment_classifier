@@ -5,8 +5,10 @@ from torch.utils.data import Dataset
 from tokenizer import Tokenizer
 from model import SentimentModel
 
+from constants import DATASET_FNAME
+
 class TestDataset (Dataset):
-    def __init__ (self, data_file="./dataset/dataset.csv"):
+    def __init__ (self, data_file=DATASET_FNAME):
         self.data = []
         self.tokenizer = Tokenizer.load()
 

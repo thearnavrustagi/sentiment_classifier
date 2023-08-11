@@ -12,7 +12,7 @@ class SentimentModel (nn.Module):
                   hidden_size : int = 256,
                   lstm_layers : int = 2,
                   dropout : float = 0.15,
-                  classes : int = 2,
+                  classes : int = 3,
                   sent_len : int = SENTENCE_LEN,
                   attention_heads : int = 16,
                   ):

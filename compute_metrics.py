@@ -41,7 +41,8 @@ def get_confusion_matrix (model,fname=VALIDATION_FNAME):
         targets.append(y_batch.numpy())
         preds.append(y_pred.numpy())
     targets, preds = np.concatenate(targets), np.concatenate(preds)
-    print(targets.shape)
+    print(targets)
+    print(preds)
     return metrics.confusion_matrix(targets, preds)
 
 if __name__ == "__main__":

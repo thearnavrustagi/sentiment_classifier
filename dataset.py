@@ -11,6 +11,8 @@ from constants import VALIDATION_DS_ROWS
 class SentimentDataset (Dataset):
     def __init__ (self, data_file=DATASET_FNAME):
         self.dataframe = pd.read_csv(data_file,encoding="latin").dropna().reset_index(drop=True)
+        #self.dataframe = self.dataframe[ (self.dataframe['category'] != 0) ]
+        #self.dataframe = self.dataframe.iloc[0:VALIDATION_DS_ROWS]
         tdf = self.dataframe.copy(deep=True)
 
         self.text = tdf.pop("text").to_numpy()
